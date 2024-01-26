@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+}
+
+.imgContainer {
+    max-height: 130px;
+    width: 250px;
+    border-radius: 3px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #f6f7f8;
+    margin-right: 10px;
+    position: relative;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row_poster_large {
+    width: 200px !important;
+    max-height: 300px !important;
+}
+
+.row_poster_large img {
+    object-fit: cover;
+}
+
+.imgScroller {
+    padding-left: 20px;
+}
+
+.preview {
+  background-color: rgba(0, 0, 0, 1.0);
+  color: #fff;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  width: 290px;
+  height: 300px;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.preview p {
+  font-size: 14px;
+}
+
+/* Updated CSS for the hover effect */
+.imgContainer:hover .popup {
+  display: block; /* Show the popup on hover */
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.imgScroller::-webkit-scrollbar {
+    display: none;
+}
+
+.preview::-webkit-scrollbar {
+    display: none;
+}
+
+.row_video1 {
+    width: 100%;
+    height: 150px;
+    object-fit: fill;
+    z-index: -1;
+    pointer-events: none;
+    padding: 0 !important;
+    overflow-y: hidden;
+}
+
+.row_video1::-webkit-scrollbar {
+    display: none;
+}
+
+.preview2 {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 1.0);
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 10px;
+    width: 800px;
+    height: 600px;
+    z-index: 9999;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+.banner1 {
+    position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    color: white;
+    object-fit: contain;
+    height: 400px;
+    z-index: 1;
+}
+
+.banner1 .banner__title {
+    font-size: 30px;
+}
+
+.banner1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.61), #111);
+}
+
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: none;
+    z-index: 9999;
+}
+
+/* .mp--fadeBottom {
+    position: absolute;
+    bottom: 0;
+    end: 0;
+    height: 7.4rem;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37, 37, 37, 0.61),
+        #111
+    );
+    z-index: 999;
+} */
+
+.nav__div8 {
+    flex: 0 0 200px;
+    margin-right: 30px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: gray;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav__div8:hover {
+    transform: scale(0.97);
+}
+
+.smImg1 {
+    height: 110px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preview2::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .preview2 {
+        width: 600px;
+    }
+
+    .close_btn {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        cursor: none;
+        z-index: 9999;
+    }
+
+    .nav__div8 {
+        flex: 0 0 200px;
+    }
+
+    .mp__div6 {
+        display: block;
+        padding: 5px 50px;
+    }
+
+    .mp__div8 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 60px;
+    }
+
+    .banner1::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.61), #111);
+    }
+}
+
+@media (max-width: 600px) {
+    .container-fluid {
+        width: 100vw;
+        padding-left: 11px;
+    }
+
+    .title {
+        padding-left: 25px;
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .imgScroller {
+        padding-left: 25px;
+    }
+
+    .row_poster_large {
+        width: 100px !important;
+        max-height: 150px !important;
+    }
+
+    .image:not(.row_poster_large) {
+        width: 200px !important;
+        max-height: 80px !important;
+    }
+
+    .preview2__div {
+        display: none;
+    }
+}
