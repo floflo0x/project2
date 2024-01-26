@@ -95,7 +95,7 @@ function Login(props) {
 							</div>
 							<div className="mt-2 text-center">
 								<LoginSocialTwitter
-								    client_id={process.env.CLIENT_ID || ''}
+								    client_id={'c3pTOERLYlo1QXlEcTZYcHp4Ylg6MTpjaQ' || ''}
 								    redirect_uri={REDIRECT_URI}
 								    onLoginStart={onLoginStart}
 								    onLogoutSuccess={onLogoutSuccess}
