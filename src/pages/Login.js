@@ -18,7 +18,7 @@ import {
 } from 'react-social-login-buttons';
 
 function Login(props) {
-    const REDIRECT_URI = 'https://project3-nvk5.onrender.com';
+    const REDIRECT_URI = 'https://project2-wznt.onrender.com';
 
     const { connection } = useConnection();
     const { publicKey, sendTransaction, wallet } = useWallet();
