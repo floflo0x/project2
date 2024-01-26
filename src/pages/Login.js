@@ -43,11 +43,11 @@ function Login(props) {
   	}, []);
 
 	 const onResolve = useCallback(({ provider, data }) => {
+  	     console.log('Resolve callback called:', provider, data);
+		 
 	    setProvider(provider);
 	    setProfile(data);
-
-  		console.log(provider, data);
-	    
+		 
 	    // Redirect to /home after successful login
 
 	    // {({ provider, data }: IResolveParams) => {
