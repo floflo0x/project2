@@ -42,7 +42,19 @@ function Login(props) {
     	alert('logout success');
   	}, []);
 
-	console.log(provider, profile);
+	 const onResolve = useCallback(({ provider, data }) => {
+	    setProvider(provider);
+	    setProfile(data);
+
+  		console.log(provider, data);
+	    
+	    // Redirect to /home after successful login
+
+	    // {({ provider, data }: IResolveParams) => {
+			// 	setProvider(provider);
+			// 	setProfile(data);
+			// }}
+	  }, []);
 
 	return (
 		<div className="bg-black text-white" id="loginDiv">
@@ -101,10 +113,7 @@ function Login(props) {
 								    redirect_uri={REDIRECT_URI}
 								    onLoginStart={onLoginStart}
 								    onLogoutSuccess={onLogoutSuccess}
-								    onResolve={({ provider, data }: IResolveParams) => {
-								      setProvider(provider);
-								      setProfile(data);
-								    }}
+								    onResolve={onResolve}
 								    onReject={(err: any) => {
 								      console.log(err);
 								    }}
