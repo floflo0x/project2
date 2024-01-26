@@ -42,6 +42,8 @@ function Login(props) {
     	alert('logout success');
   	}, []);
 
+	console.log(provider, profile);
+
 	return (
 		<div className="bg-black text-white" id="loginDiv">
 			<header>
